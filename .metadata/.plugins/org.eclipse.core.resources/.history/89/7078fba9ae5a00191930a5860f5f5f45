@@ -1,0 +1,10 @@
+package com.stpl.springdemo;
+
+public class BaseabllCoach implements Coach {
+
+	@Override
+	public String getDailyWorkout() {
+		return "Spend 30mins on batting practise";
+	}
+	
+}

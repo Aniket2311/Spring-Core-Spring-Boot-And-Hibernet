@@ -1,0 +1,21 @@
+package com.stpl.springdemo;
+
+public class BaseaballCoach implements Coach {
+
+	private FortuneService fortuneService;
+	
+	public BaseaballCoach(FortuneService theFortuneService) {
+		fortuneService = theFortuneService;
+	}
+	
+	@Override
+	public String getDailyWorkout() {
+		return "Spend 30mins on batting practise";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		return fortuneService.getFortune();
+	}
+	
+}

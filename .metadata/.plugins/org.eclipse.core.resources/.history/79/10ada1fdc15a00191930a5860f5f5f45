@@ -1,0 +1,6 @@
+package com.stpl.springdemo;
+
+public class SetterDemoApp {
+	public static void main(String[] args) {
+	}
+}

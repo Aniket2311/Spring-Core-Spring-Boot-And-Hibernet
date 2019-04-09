@@ -1,0 +1,17 @@
+package com.stpl.springdemo;
+
+public class CricketCoach implements Coach {
+
+	private FortuneService fortuneService;
+	
+	@Override
+	public String getDailyWorkout() {
+		return "Practise fast bowling for 15mins daily";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		return null;
+	}
+
+}

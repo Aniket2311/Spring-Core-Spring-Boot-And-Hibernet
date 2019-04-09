@@ -1,0 +1,14 @@
+package com.stpl.springdemo;
+
+public class MyApp {
+
+	public static void main(String[] args) {
+		// TODO Creating the object
+		BaseabllCoach theCoach = new BaseabllCoach();
+				
+		
+		// TODO Using the object
+
+	}
+
+}
