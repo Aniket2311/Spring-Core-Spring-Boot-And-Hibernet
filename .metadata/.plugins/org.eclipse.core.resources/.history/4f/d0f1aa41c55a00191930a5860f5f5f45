@@ -26,8 +26,6 @@
 	<bean id="myCricketCoach"
 		class="com.stpl.springdemo.CricketCoach">
 		<property name="fortuneService" ref="myHappyFortuneService"/>
-		<property name="emailAddress" value="cricketcoach@stpl.com"/>
-		<property name="team" value="STPL"/>
 	</bean>
 
 </beans>
