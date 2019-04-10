@@ -5,10 +5,11 @@ public class TrackCoach implements Coach {
 	private FortuneService fortuneService;
 	
 	public TrackCoach() {
-		super();
+		System.out.println("TrackCoach: Inside Constructor----");
 	}
 
 	public TrackCoach(FortuneService fortuneService) {
+		System.out.println("TrackCoach: Inside Constructor with parameter FortuneService----");
 		this.fortuneService = fortuneService;
 	}
 
@@ -25,5 +26,12 @@ public class TrackCoach implements Coach {
 	public void m1() {
 		System.out.println("Inside m1 of TrackCoach");
 	}
-
+	
+	public void doMyStartupStuff() {
+		System.out.println("TrackCoach: Inside method doMyStartupStuff---------");
+	}
+	
+	public void doMyCleanupStuff() {
+		System.out.println("TrackCoach: Inside method doMyCleanupStuff---------");
+	}
 }

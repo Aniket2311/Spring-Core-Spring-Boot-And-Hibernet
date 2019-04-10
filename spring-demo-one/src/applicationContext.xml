@@ -8,9 +8,16 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<context:property-placeholder location="classpath:newSport.properties"/>
+	<context:property-placeholder location="classpath:sport.properties"/>
+
     <!-- Define your beans here -->
 	<bean id="myHappyFortuneService"
 		class="com.stpl.springdemo.HappyFortuneService">
+	</bean>
+	
+	<bean id="myRandomFortuneService"
+		class="com.stpl.springdemo.RandomFortuneService">
 	</bean>
 
 	<bean id="myTrackCoach"
@@ -26,8 +33,14 @@
 	<bean id="myCricketCoach"
 		class="com.stpl.springdemo.CricketCoach">
 		<property name="fortuneService" ref="myHappyFortuneService"/>
-		<property name="emailAddress" value="cricketcoach@stpl.com"/>
-		<property name="team" value="STPL"/>
+		<property name="emailAddress" value="${foo.email}"/>
+		<property name="team" value="${foo.team}"/>
+	</bean>
+	
+	<bean id="myGolfCoach"
+		class="com.stpl.springdemo.GolfCoach">
+		
+		<constructor-arg ref="myRandomFortuneService"/>
 	</bean>
 
 </beans>
